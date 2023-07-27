@@ -1,0 +1,397 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+/*------------------------------------------------------------------------------------*/
+/* NAVBAR STYLING STARTS */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #313333;
+  color: #fff;
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+  margin-left: 25px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #313333;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: #313333;
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 50px;
+  left:-45px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #313333;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+/* CHECKBOX HACK */
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+ .menu {
+    display:none;
+    position: absolute;
+    background-color:#313333;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color:#313333;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #313333;
+  }
+}
+/*---------------------------------------------------------------*/
+
+body{
+  margin:0;
+  overflow-x:hidden;
+  }
+  
+  .footer{
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+
+  /*-------------------------- INDEX -------------------------*/
+
+  .main {
+    width: 100%;
+    background-image: url("../assets/images/caravana.jpg");
+    background-size: cover;
+    background-position: center 50%;
+    display: flex;
+    justify-content: start;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    flex-direction: column;
+    min-height: 1000px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60%;
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+
+  .card>h1 {
+    font-size: 60px;
+  }
+
+  .card>p {
+    font-size: 28px;
+  }
+
+  .b-catalogo {
+    width: 50%;
+    height: 50px;
+    margin-top: 40px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+    font-size: 16px;
+    background-color: #313333;
+    border-style: none;
+  }
+
+/*-------------------------- LISTADO -------------------------*/
+.main-list {
+  display: flex;
+  justify-content: space-around;
+  align-content: start;
+  flex-direction: row;
+}
+
+.side-filter {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 20%;
+  height: 600px;
+  background-color: azure;
+}
+
+.list {
+  margin-top: 5%;
+  margin-right: 5%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*----------------------- CARTA-AUTO -----------------------*/
+
+.carta-auto {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #313333;
+  border-radius: 20px;
+}
+
+.div-img {
+  height: 200px;
+  width: 25%;
+  background-color: red;
+}
+
+.div-info {
+  max-width: 50%;
+}
+
+.div-info>p {
+  font-size: smaller;
+}
+
+.div-alquiler {
+  width:20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-alquiler>h2 {
+  text-align: center;
+}
+
+.div-alquiler>button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-size: 16px;
+    background-color: #313333;
+    border-style: none;
+}
+
+/* -------------------------------- FORM --------------------------------- */
+
+.carta-auto-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #313333;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.form-div-img {
+  width: 100%;
+ height: 400px;
+ background-color: red;
+}
+
+/* ------------------------------ FORM ----------------------------- */
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin: 0 auto;
+  background-color: #313333;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+fieldset {
+  display: grid;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 10px;
+}
+
+label,
+input {
+  margin-bottom: 5px;
+}
+
+.btn-enviar {
+  grid-column-start: span 2;
+  width: 100%;
+  height: 50px;
+}

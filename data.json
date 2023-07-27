@@ -1,0 +1,28 @@
+{
+    "autocaravanas": [
+      {
+        "imagen": "ruta/de/imagen1.jpg",
+        "modelo": "Autocaravana Modelo 1",
+        "caracteristicas": ["Aire acondicionado", "Cocina", "Baño"],
+        "extras": ["TV", "Wi-Fi", "Barbacoa"],
+        "precio": 100,
+        "dias_reservados": ["2023-07-28", "2023-07-29"]
+      },
+      {
+        "imagen": "ruta/de/imagen2.jpg",
+        "modelo": "Autocaravana Modelo 2",
+        "caracteristicas": ["Aire acondicionado", "Cocina", "Baño", "Calefacción"],
+        "extras": ["TV", "Wi-Fi"],
+        "precio": 120,
+        "dias_reservados": ["2023-08-01", "2023-08-05"]
+      },
+      {
+        "imagen": "ruta/de/imagen3.jpg",
+        "modelo": "Autocaravana Modelo 3",
+        "caracteristicas": ["Aire acondicionado", "Cocina"],
+        "extras": ["TV", "Barbacoa"],
+        "precio": 90,
+        "dias_reservados": ["2023-07-30", "2023-08-02", "2023-08-03"]
+      }
+    ]
+  }
